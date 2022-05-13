@@ -1,0 +1,18 @@
+
+  # fhngn
+  # Description
+ gnrgn
+  # Installation : What command should we run to install
+ npm i
+  # Usage : What command should we run to test
+ npm test
+  # Credits : Any collaborators
+ ggbrg
+  # Questions : https://github.com/AlexCan36/AlexCan36.git
+ rtbtrbbrtb
+  # Additional questions? Reach me at: 'test@gmail.com'
+ tbtbt@gbrbtr
+  # License
+  undefined
+  undefined
+  undefined

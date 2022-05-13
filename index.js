@@ -16,38 +16,55 @@ const questions = [
     {
         type: "input",
         name: "installation",
-        message: "What are the steps required to install your project? Provide a step-by-step description of how to get the development environment running.",
+        message: "What command should be use for installation?",
+        default: "npm i",
     }, {
         type: "input",
         name: "usage",
-        message: "Provide instructions and examples for use. Include screenshots as needed.",
-    },
-     {
-        type: "input",
-        name: "credits",
-        message: "List your collaborators, if any, with links to their GitHub profiles. If you followed tutorials, include links to those here as well.  ",
+        message: "What command should be run to run test?",
+        default: "npm test",
     },
     {
         type: "input",
+        name: "credits",
+        message: "List your collaborators.",
+    },
+    {
+        type: "list",
         name: "licence",
-        message: "The last section of a high-quality README file is the license. This lets other developers know what they can and cannot do with your project.",
-        choices: ['MIT', 'Apache 2.0' , 'GNU'],
+        message: "Pick your project",
+        choices: ['MIT', 'Apache 2.0', 'GNU', 'None'],
+    },
+    {
+        type: "input",
+        name: "questions",
+        message: "Whats your github username?",
+    },
+    {
+        type: "input",
+        name: "inquires",
+        message: "Whats your email?",
     },
     
 ];
 
 // TODO: Create a function to write README file
-function writeToFile(fileName, data) {
+function writeToFile(data) {
+    var fs = require('fs')
+    var logger = fs.createWriteStream('log.txt', {
+        
+    })
 
- }
+    logger.write(data) 
+}
 
 // TODO: Create a function to initialize app
 function init() {
-    inquirer.prompt(questions).then(function(answers){
+    inquirer.prompt(questions).then(function (answers) {
         const markdown = generateMarkdown(answers)
-        writeToFile("README.md", markdown)
+        writeToFile(markdown)
     })
- }
+}
 
 // Function call to initialize app
 init();
