@@ -37,21 +37,38 @@ const questions = [
     },
     {
         type: "input",
-        name: "questions",
+        name: "github",
         message: "Whats your github username?",
     },
     {
         type: "input",
-        name: "inquires",
+        name: "email",
         message: "Whats your email?",
+    },
+    {
+        type: "input",
+        name: "badgelabel",
+        message: "What label do you want on your badge?",
+    },
+    {
+        type: "input",
+        name: "badgemessage",
+        message: "What message do you want on your badge?",
+    },
+    {
+        type: "list",
+        name: "badgecolor",
+        message: "What color do you want on your badge?",
+        choices: ['red' , 'blue' , 'green' , 'blueviolet' , 'orange'],
     },
     
 ];
 
+//https://img.shields.io/static/v1?label=<LABEL>&message=<MESSAGE>&color=<COLOR>
 // TODO: Create a function to write README file
 function writeToFile(data) {
     var fs = require('fs')
-    var logger = fs.createWriteStream('log.txt', {
+    var logger = fs.createWriteStream('log.md', {
         
     })
 
